@@ -2,14 +2,15 @@
 exportVersion: "1"
 exportId: "8a7482b58dbfdac9018debc0f6610000"
 name: "Demo Alok"
-runtime: "python"
+runtime: "powershell"
 entrypoint: "handler"
 inputs:
   target: "World"
+  password: ""
 timeoutSeconds: 600
 deploymentTimeoutSeconds: 900
+dependencies: "@{\r\nPowervRACloud = ‘1.4’\r\n}"
 actionType: "SCRIPT"
-configuration:
-  const_azure-system_managed_identity: false
+provider: "on-prem"
 memoryInMB: 300
-runtimeVersion: "3.10"
+runtimeVersion: "7.2"
