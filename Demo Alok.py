@@ -1,9 +1,5 @@
-def handler(context, inputs):
-    greeting = "Hello, {0}!".format(inputs["target"])
-    print(greeting)
+function handler($context, $inputs) {
+  Write-Host "Hello " $inputs.target
 
-    outputs = {
-      "greeting": greeting
-    }
-
-    return outputs
+  return $inputs
+}
